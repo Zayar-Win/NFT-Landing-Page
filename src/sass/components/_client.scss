@@ -1,0 +1,11 @@
+.clients{
+    display: flex;
+    margin:0 2rem;
+    margin-bottom:5rem;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @media screen and (max-width:750px) {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,91 @@
+footer{
+    background: #443357;
+    background: linear-gradient(to right, #443357, #394053);
+
+    .container{
+        padding:5rem 8rem;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap:4rem;
+
+        .sub-footer{
+            display: flex;
+            gap:1rem;
+            flex-direction: column;
+            p{
+                color:white;
+                font-size:.8rem;
+            }
+
+            h3{
+                color:white;
+                font-size:1rem;
+            }
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap:.7rem;
+                li{
+                    display: flex;
+                    gap:1rem;
+                    align-items: center;
+                    a{
+                        color:#9ea7ad;
+                        font-size:.9rem;
+                    }
+                    .icon{
+                        border:1px solid #2d68fd7f;
+                    padding:.2rem;
+                    border-radius: .3rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    svg{
+                        color:#2d69fd;
+                        font-size:1.2rem;
+                    }
+                    }
+                }
+            }
+
+            .social-icons{
+                display: flex;
+                gap:1rem;
+
+                .icon{
+                    border:1px solid #2d68fd7f;
+                    padding:.2rem;
+                    border-radius: .3rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    svg{
+                        color:#2d69fd;
+                        font-size:1.3rem;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:850px) {
+        .container{
+            padding:3rem 5rem;
+            gap:3rem;
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+
+    @media  screen and (max-width:680px) {
+        .container{
+            padding:2rem 4rem;
+            gap:2rem;
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @media screen and (max-width:480px) {
+        .container{
+            grid-template-columns: 1fr;
+        }
+    }
+}

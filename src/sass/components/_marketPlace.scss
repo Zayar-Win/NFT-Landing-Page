@@ -1,0 +1,109 @@
+.marketplace{
+    margin:0 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap:2.7rem;
+
+        h2{
+            font-size:2.5rem;
+        }
+        p{
+            color:#7b7e86;
+            font-size:.8rem;
+        }
+    }
+    .marketplaceTypes{
+        display: flex;
+        justify-content: center;
+        gap:1rem;
+        flex-wrap: wrap;
+        button:not(.blue){
+            color:black;
+            border-color:#7b7e86;
+        }
+    }
+
+    .card-container{
+        max-width:100%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap:2rem;
+        .card{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding: 0.5rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+            &:hover {
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+                rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+                rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            }
+            .image {
+                margin-bottom: 1rem;
+                img{
+                    max-width:100%;
+                    width:100%;
+                    object-fit: cover;
+                }
+            }
+            .name {
+                display: flex;
+                color: #222222;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 1rem;
+                h4 {
+                }
+            }
+            .username {
+                color: #555555;
+                font-size: 0.8rem;
+                padding: 0 1rem;
+                margin-bottom: 0.5rem;
+            }
+            .price-container {
+                padding: 0 1rem;
+                display: flex;
+                justify-content: space-between;
+                color: #02204e;
+            }
+        }
+    }
+
+    @media screen and (max-width:850px) {
+        margin:0 2rem;
+        margin-bottom: 5rem;
+        gap:2rem;
+
+        .title{
+            gap:2rem;
+            h2{
+                font-size:2rem;
+            }
+        }
+
+        .card-container{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+
+    @media screen and (max-width:700px) {
+        .card-container{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @media screen and (max-width:450px) {
+        .card-container{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+}
